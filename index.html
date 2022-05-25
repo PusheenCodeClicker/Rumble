@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Redirecting...</title>
+   <link type="text/css" rel="stylesheet" href="style.css"/>
+</head>
+<body>
+   <div id="notfound" style="display:none">
+      <div class="notfound">
+         <div class="notfound-404">
+            <h1>New<span class="space"></spanTab>Tab</h1>
+         </div>
+         <h2>Our Site Works Only In A New Tab</h2>
+         <p>In order to use this site, please click the little arrow/box icon in the top left corner that says "Open Website".</p>
+      </div>
+   </div>
+  <div id="notfound2" style="display:none">
+      <div class="notfound">
+         <div class="notfound-404">
+            <h1>Redirect</h1>
+         </div>
+         <h2>Redirecting You To Our Site...</h2>
+         <p>If you are not being redirected then copy and paste this url into the search bar: https://socialrumbles.com/chat/</p>
+      </div>
+   </div>
+  <script>
+      if(window.self !== window.top){
+        document.getElementById("notfound").style.display = "flex";
+        document.getElementById("notfound2").style.display = "none";
+      }else{
+        document.getElementById("notfound2").style.display = "flex";
+        location.replace('https://socialrumbles.com/chat/');
+      }
+  </script>
+</body>
+</html>
